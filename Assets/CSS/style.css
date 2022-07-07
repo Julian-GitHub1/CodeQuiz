@@ -14,6 +14,8 @@ body{
     margin: 0;
 }
 
+
+
 .quiz-container{
     background-color: white;
     border-radius: 10px;
@@ -21,6 +23,7 @@ body{
     width: 600px;
     overflow: hidden;
 }
+
 
 .quiz-header{
     padding: 4rem;
@@ -47,7 +50,7 @@ ul li label{
 }
 
 button{
-    background-color: aqua;
+    background-color: #03cae4;
     color: white;
     border: none;
     display: block;
@@ -59,5 +62,17 @@ button{
 }
 
 button:hover{
+    background-color: #04adc4;
+}
+
+button:focus{
+    outline: none;
     background-color: blue;
+}
+
+#timer{
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    overflow: visible;
 }

@@ -1,3 +1,8 @@
+var timerEl = document.querySelector("#timer");
+var timerId;
+// var startQuizBtnEl;
+
+
 const quizData = [
     {
         question: 'How many countries are in the world?',
@@ -104,32 +109,17 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
+// startQuizBtnEl.addEventListener("click", countdown);
+function countdown() {
+  timerId = setInterval(function () {
+    if (timeLeft > 0) {
+      timerEl.textContent = "Time left is " + timeLeft;
+    } else {
+      timerEl.textContent = "";
+      clearInterval(timerId);
+      window.alert("You ran out of time!");
+    }
 
-
-// var timerEl = document.getElementById('countdown');
-
-
-// function countdown() {
-//     var timeLeft = 5;
-  
-//     var timeInterval = setInterval(function () {
-    
-//       if (timeLeft > 1) {
-        
-//         timerEl.textContent = timeLeft + ' seconds remaining';
-        
-//         timeLeft--;
-//       } else if (timeLeft === 1) {
-       
-//         timerEl.textContent = timeLeft + ' second remaining';
-//         timeLeft--;
-//       } else {
-       
-//         timerEl.textContent = '';
-       
-//         clearInterval(timeInterval);
-       
-//         displayMessage();
-//       }
-//     }, 1000);
-// }
+    timeLeft = timeLeft - 1;
+  }, 1000);
+}
