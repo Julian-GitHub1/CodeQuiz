@@ -67,12 +67,16 @@ button:hover{
 
 button:focus{
     outline: none;
-    background-color: blue;
+    background-color: rgb(0, 183, 255);
 }
 
 #timer{
     display: flex;
+    justify-content: right;
+    align-items: top;
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-    overflow: visible;
+    font-size: medium;
+    font-weight: bold;
+    color: red;
+    margin: 20px;
 }

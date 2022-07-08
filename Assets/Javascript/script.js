@@ -1,5 +1,6 @@
 var timerEl = document.querySelector("#timer");
 var timerId;
+var userScore = 60;
 // var startQuizBtnEl;
 
 
@@ -109,17 +110,19 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
+countdown();
+
 // startQuizBtnEl.addEventListener("click", countdown);
 function countdown() {
   timerId = setInterval(function () {
-    if (timeLeft > 0) {
-      timerEl.textContent = "Time left is " + timeLeft;
+    if (userScore > 0) {
+      timerEl.textContent = "Time left is " + userScore;
     } else {
-      timerEl.textContent = "";
+      timerEl.textContent = "Time is up!";
       clearInterval(timerId);
-      window.alert("You ran out of time!");
+
     }
 
-    timeLeft = timeLeft - 1;
+    userScore = userScore - 1;
   }, 1000);
 }
